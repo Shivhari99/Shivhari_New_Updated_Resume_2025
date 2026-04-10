@@ -68,13 +68,20 @@
             transform: translateY(-2px);
         }
 
-        .resume-content {
+        .pages-container {
+            display: grid;
+            gap: 30px;
+        }
+
+        .page {
             background: white;
             color: #1f2937;
             padding: 48px;
             border-radius: 10px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             line-height: 1.6;
+            min-height: 1122px;
+            page-break-after: always;
         }
 
         /* Header */
@@ -233,14 +240,14 @@
         }
 
         .patent-list {
-            font-size: 12px;
-            line-height: 1.8;
+            font-size: 11px;
+            line-height: 1.7;
             color: #374151;
         }
 
         .patent-list li {
             margin-left: 15px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         /* Certifications */
@@ -259,6 +266,25 @@
             margin-right: 5px;
         }
 
+        /* Page Header for Page 2 */
+        .page-header {
+            text-align: center;
+            border-bottom: 2px solid #d1d5db;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .page-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .page-header p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
         /* Print Styles */
         @media print {
             body {
@@ -270,14 +296,15 @@
                 display: none;
             }
 
-            .resume-content {
+            .page {
                 box-shadow: none;
                 border-radius: 0;
+                page-break-after: always;
             }
         }
 
         @media (max-width: 768px) {
-            .resume-content {
+            .page {
                 padding: 30px;
             }
 
@@ -315,202 +342,219 @@
             </button>
         </div>
 
-        <div class="resume-content" id="resumeContent">
-            <!-- Header -->
-            <div class="header">
-                <h1>SHIVHARI TEWARI</h1>
-                <p class="title">Machine Learning Engineer & Data Analyst</p>
-                <div class="contact-info">
-                    <span>📞 +91 9971165439</span>
-                    <span>📧 tewarishivhari999@gmail.com</span>
-                    <span>📍 Lucknow, Uttar Pradesh, India</span>
+        <div class="pages-container" id="resumeContent">
+            <!-- PAGE 1 -->
+            <div class="page">
+                <!-- Header -->
+                <div class="header">
+                    <h1>SHIVHARI TEWARI</h1>
+                    <p class="title">Machine Learning Engineer & Data Analyst</p>
+                    <div class="contact-info">
+                        <span>📞 +91 9971165439</span>
+                        <span>📧 tewarishivhari999@gmail.com</span>
+                        <span>📍 Lucknow, Uttar Pradesh, India</span>
+                    </div>
+                    <div class="contact-info" style="margin-top: 12px;">
+                        <span><a href="https://www.linkedin.com/in/shivhari-tewari-19702712a" style="color: #2563eb; text-decoration: none;">🔗 LinkedIn</a></span>
+                        <span><a href="https://scholar.google.com/citations?user=MiF3TfQAAAAJ&hl=en" style="color: #2563eb; text-decoration: none;">📚 Google Scholar</a></span>
+                        <span><a href="https://www.researchgate.net/profile/Shiv-Hari-Tewari/research" style="color: #2563eb; text-decoration: none;">🔬 ResearchGate</a></span>
+                    </div>
                 </div>
-                <div class="contact-info" style="margin-top: 12px;">
-                    <span><a href="https://www.linkedin.com/in/shivhari-tewari-19702712a" style="color: #2563eb; text-decoration: none;">🔗 LinkedIn</a></span>
-                    <span><a href="https://scholar.google.com/citations?user=MiF3TfQAAAAJ&hl=en" style="color: #2563eb; text-decoration: none;">📚 Google Scholar</a></span>
-                    <span><a href="https://www.researchgate.net/profile/Shiv-Hari-Tewari/research" style="color: #2563eb; text-decoration: none;">🔬 ResearchGate</a></span>
+
+                <!-- Summary -->
+                <div class="section">
+                    <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+                    <p class="summary-text">
+                        Dynamic Machine Learning Engineer and Data Analyst with expertise in AI, deep learning, and data-driven solutions. PhD in Machine Learning from IIIT Allahabad with proven track record at McKinsey & Company and UPES. Proficient in Python, advanced ML algorithms, and modern technologies. Combining academic excellence with industry experience to develop innovative, scalable solutions that drive business impact.
+                    </p>
+                </div>
+
+                <!-- Skills -->
+                <div class="section">
+                    <h2 class="section-title">TOP SKILLS</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">Generative AI Tools</div>
+                        <div class="skill-item">Python Programming</div>
+                        <div class="skill-item">Machine Learning</div>
+                        <div class="skill-item">Deep Learning</div>
+                        <div class="skill-item">Data Analysis</div>
+                        <div class="skill-item">Neural Networks</div>
+                        <div class="skill-item">SQL & Databases</div>
+                        <div class="skill-item">Linux Systems</div>
+                        <div class="skill-item">Java Enterprise Edition</div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="section">
+                    <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Assistant Professor</div>
+                                <div class="job-company">Chandigarh University, Lucknow Campus</div>
+                            </div>
+                            <div class="job-date">Aug 2025 - Present</div>
+                        </div>
+                        <div class="job-description">Conducting classes in Python Programming, Natural Language Processing, and Machine Learning. Training students on tools like Spacy, NLTK, and algorithms like HMM, Naive Bayes, SVM, Logistic Regression. Research on Generative AI and EDA. Workshops on Deep Learning and AI.</div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Assistant Professor</div>
+                                <div class="job-company">University of Petroleum and Energy Studies, Dehradun</div>
+                            </div>
+                            <div class="job-date">Aug 2025 - Present</div>
+                        </div>
+                        <div class="job-description">Conducting classes in Python Programming, Java EE, and Machine Learning. Research on Generative AI and EDA. Workshops on Deep Learning and AI.</div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Assistant Professor</div>
+                                <div class="job-company">Sunstone Education Technology, Gurugram</div>
+                            </div>
+                            <div class="job-date">Aug 2023 - Aug 2025</div>
+                        </div>
+                        <div class="job-description">2+ years of academic excellence, curriculum development, and student mentoring in emerging technologies.</div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior Python Developer</div>
+                                <div class="job-company">24/7 Infowiz Tech, Jaipur</div>
+                            </div>
+                            <div class="job-date">Dec 2021 - Dec 2022</div>
+                        </div>
+                        <div class="job-description">Developed tools for Pfizer SDTMIG updation. Created GUI and Django-based web applications.</div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Data Analyst</div>
+                                <div class="job-company">McKinsey & Company, Gurugram</div>
+                            </div>
+                            <div class="job-date">Dec 2020 - Nov 2021</div>
+                        </div>
+                        <div class="job-description">Data analysis, modeling, and analytical predictions for company clients. Optimized business intelligence strategies.</div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Data Science Intern</div>
+                                <div class="job-company">Iha Consulting Services Pvt. Ltd., Hyderabad</div>
+                            </div>
+                            <div class="job-date">May 2020 - Feb 2021</div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Machine Learning Intern</div>
+                                <div class="job-company">Intellify, New Delhi</div>
+                            </div>
+                            <div class="job-date">Feb 2020 - May 2020</div>
+                        </div>
+                        <div class="job-description">Created tutorials for 10+2 students as ML expert.</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Summary -->
-            <div class="section">
-                <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
-                <p class="summary-text">
-                    Dynamic Machine Learning Engineer and Data Analyst with expertise in AI, deep learning, and data-driven solutions. PhD in Machine Learning from IIIT Allahabad with proven track record at McKinsey & Company and UPES. Proficient in Python, advanced ML algorithms, and modern technologies. Combining academic excellence with industry experience to develop innovative, scalable solutions that drive business impact.
-                </p>
-            </div>
-
-            <!-- Skills -->
-            <div class="section">
-                <h2 class="section-title">TOP SKILLS</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">Generative AI Tools</div>
-                    <div class="skill-item">Python Programming</div>
-                    <div class="skill-item">Machine Learning</div>
-                    <div class="skill-item">Deep Learning</div>
-                    <div class="skill-item">Data Analysis</div>
-                    <div class="skill-item">Neural Networks</div>
-                    <div class="skill-item">SQL & Databases</div>
-                    <div class="skill-item">Linux Systems</div>
-                    <div class="skill-item">Java Enterprise Edition</div>
+            <!-- PAGE 2 -->
+            <div class="page">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <h2>SHIVHARI TEWARI</h2>
+                    <p>Education, Certifications, Patents & Publications</p>
                 </div>
-            </div>
 
-            <!-- Experience -->
-            <div class="section">
-                <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+                <!-- Education -->
+                <div class="section">
+                    <h2 class="section-title">EDUCATION</h2>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Assistant Professor</div>
-                            <div class="job-company">Chandigarh University, Lucknow Campus</div>
+                    <div class="education-item">
+                        <div class="education-degree">
+                            <span class="degree-name">Doctor of Philosophy - Machine Learning</span>
+                            <span class="degree-year">Dec 2023</span>
                         </div>
-                        <div class="job-date">Aug 2025 - Present</div>
+                        <div class="degree-school">Indian Institute of Information Technology Allahabad</div>
                     </div>
-                    <div class="job-description">Conducting classes in Python Programming, Natural Language Processing, and Machine Learning. Training students on tools like Spacy, NLTK, and algorithms like HMM, Naive Bayes, SVM, Logistic Regression. Research on Generative AI and EDA. Workshops on Deep Learning and AI.</div>
-                </div>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Assistant Professor</div>
-                            <div class="job-company">University of Petroleum and Energy Studies, Dehradun</div>
+                    <div class="education-item">
+                        <div class="education-degree">
+                            <span class="degree-name">Master of Technology - Computer Science</span>
+                            <span class="degree-year">Jul 2019 - Jun 2021</span>
                         </div>
-                        <div class="job-date">Aug 2025 - Present</div>
+                        <div class="degree-school">Birla Institute of Technology, Mesra</div>
                     </div>
-                    <div class="job-description">Conducting classes in Python Programming, Java EE, and Machine Learning. Research on Generative AI and EDA. Workshops on Deep Learning and AI.</div>
-                </div>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Assistant Professor</div>
-                            <div class="job-company">Sunstone Education Technology, Gurugram</div>
+                    <div class="education-item">
+                        <div class="education-degree">
+                            <span class="degree-name">Bachelor of Technology - CSE</span>
+                            <span class="degree-year">Jul 2014 - Jun 2018</span>
                         </div>
-                        <div class="job-date">Aug 2023 - Aug 2025</div>
-                    </div>
-                    <div class="job-description">2+ years of academic excellence, curriculum development, and student mentoring in emerging technologies.</div>
-                </div>
-
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Senior Python Developer</div>
-                            <div class="job-company">24/7 Infowiz Tech, Jaipur</div>
-                        </div>
-                        <div class="job-date">Dec 2021 - Dec 2022</div>
-                    </div>
-                    <div class="job-description">Developed tools for Pfizer SDTMIG updation. Created GUI and Django-based web applications.</div>
-                </div>
-
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Data Analyst</div>
-                            <div class="job-company">McKinsey & Company, Gurugram</div>
-                        </div>
-                        <div class="job-date">Dec 2020 - Nov 2021</div>
-                    </div>
-                    <div class="job-description">Data analysis, modeling, and analytical predictions for company clients. Optimized business intelligence strategies.</div>
-                </div>
-
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Data Science Intern</div>
-                            <div class="job-company">Iha Consulting Services Pvt. Ltd., Hyderabad</div>
-                        </div>
-                        <div class="job-date">May 2020 - Feb 2021</div>
+                        <div class="degree-school">GL Bajaj Institute of Technology and Management</div>
                     </div>
                 </div>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Machine Learning Intern</div>
-                            <div class="job-company">Intellify, New Delhi</div>
-                        </div>
-                        <div class="job-date">Feb 2020 - May 2020</div>
+                <!-- Patents & Publications -->
+                <div class="two-column">
+                    <div class="patent-pub section">
+                        <h2 class="section-title">PATENTS</h2>
+                        <ul class="patent-list">
+                            <li>AI Dialogue Systems for English Language Learning in Universities</li>
+                            <li>AI-Based Sterilization and Disinfectant Institutional Robot</li>
+                        </ul>
                     </div>
-                    <div class="job-description">Created tutorials for 10+2 students as ML expert.</div>
-                </div>
-            </div>
-            <BR>
-            <BR>
 
-            <!-- Education -->
-            <div class="section">
-                <h2 class="section-title">EDUCATION</h2>
-
-                <div class="education-item">
-                    <div class="education-degree">
-                        <span class="degree-name">Doctor of Philosophy - Machine Learning</span>
-                        <span class="degree-year">Dec 2023</span>
+                    <div class="patent-pub section">
+                        <h2 class="section-title">PUBLICATIONS</h2>
+                        <ul class="patent-list">
+                            <li>Enhancing Synthetic Data Generation with Fine-Tuned GPT Models for High-Accuracy Predictive Analytics - International Journal of Science, Engineering and Technology (2025)</li>
+                            <li>Enhancing Exploratory Data Analysis through Fine-Tuned Generative AI: A Comparative Study with Traditional Machine Learning - International Journal of Science, Engineering and Technology (2025)</li>
+                            <li>Necessity of Data Science for Enhanced Cybersecurity - International Journal of Data Science and Big Data Analytics (2021)</li>
+                            <li>Data Science and Its Application in Cyber Security - Data Science in Cyber Security and Cyber Threat Intelligence (2020)</li>
+                            <li>Ways to Regulate the Abuses of Blockchain and Cryptocurrency Over the Dark Web - International Journal of Blockchain and Cryptocurrency Research, Vol. 3(1), 78-88 (2023) - DOI: 10.51483/IJCCR.3.1.2023.78-88</li>
+                            <li>Districtwise Economic Analysis of Sugarcane Farming in Madhya Pradesh using Machine Learning: A Comprehensive Assessment - with S Bhowmik</li>
+                        </ul>
                     </div>
-                    <div class="degree-school">Indian Institute of Information Technology Allahabad</div>
                 </div>
 
-                <div class="education-item">
-                    <div class="education-degree">
-                        <span class="degree-name">Master of Technology - Computer Science</span>
-                        <span class="degree-year">Jul 2019 - Jun 2021</span>
+                <!-- Certifications -->
+                <div class="section">
+                    <h2 class="section-title">CERTIFICATIONS</h2>
+                    <div class="cert-grid">
+                        <div class="cert-item">R Programming for Data Science</div>
+                        <div class="cert-item">Machine Learning using Python</div>
+                        <div class="cert-item">Artificial Intelligence using Python</div>
+                        <div class="cert-item">Python for Data Science</div>
                     </div>
-                    <div class="degree-school">Birla Institute of Technology, Mesra</div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-degree">
-                        <span class="degree-name">Bachelor of Technology - CSE</span>
-                        <span class="degree-year">Jul 2014 - Jun 2018</span>
-                    </div>
-                    <div class="degree-school">GL Bajaj Institute of Technology and Management</div>
-                </div>
-            </div>
-
-            <!-- Patents & Publications -->
-            <div class="two-column">
-                <div class="patent-pub section">
-                    <h2 class="section-title">PATENTS</h2>
-                    <ul class="patent-list">
-                        <li>AI Dialogue Systems for English Language Learning in Universities</li>
-                        <li>AI-Based Sterilization and Disinfectant Institutional Robot</li>
-                    </ul>
-                </div>
-
-                <div class="patent-pub section">
-                    <h2 class="section-title">PUBLICATIONS</h2>
-                    <ul class="patent-list">
-                        <li>Enhancing Synthetic Data Generation with Fine-Tuned GPT Models for High-Accuracy Predictive Analytics - International Journal of Science, Engineering and Technology (2025)</li>
-                        <li>Enhancing Exploratory Data Analysis through Fine-Tuned Generative AI: A Comparative Study with Traditional Machine Learning - International Journal of Science, Engineering and Technology (2025)</li>
-                        <li>Necessity of Data Science for Enhanced Cybersecurity - International Journal of Data Science and Big Data Analytics (2021)</li>
-                        <li>Data Science and Its Application in Cyber Security (Cyber Security Data Science) - Data Science in Cyber Security and Cyber Threat Intelligence (2020)</li>
-                        <li>Ways to Regulate the Abuses of Blockchain and Cryptocurrency Over the Dark Web - International Journal of Blockchain and Cryptocurrency Research, Vol. 3(1), 78-88 (2023) - DOI: 10.51483/IJCCR.3.1.2023.78-88</li>
-                        <li>Districtwise Economic Analysis of Sugarcane Farming in Madhya Pradesh using Machine Learning: A Comprehensive Assessment - with S Bhowmik</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="section">
-                <h2 class="section-title">CERTIFICATIONS</h2>
-                <div class="cert-grid">
-                    <div class="cert-item">R Programming for Data Science</div>
-                    <div class="cert-item">Machine Learning using Python</div>
-                    <div class="cert-item">Artificial Intelligence using Python</div>
-                    <div class="cert-item">Python for Data Science</div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        function downloadPDF() {
+        // Auto-generate PDF when page loads
+        window.addEventListener('load', function() {
+            setTimeout(generatePDFAuto, 1000);
+        });
+
+        function generatePDFAuto() {
             const element = document.getElementById('resumeContent');
             html2canvas(element, {
                 scale: 2,
                 useCORS: true,
-                backgroundColor: '#ffffff'
+                backgroundColor: '#ffffff',
+                logging: false,
+                allowTaint: true
             }).then(canvas => {
                 const { jsPDF } = window.jspdf;
                 const pdf = new jsPDF({
@@ -521,25 +565,35 @@
 
                 const imgData = canvas.toDataURL('image/png');
                 const imgWidth = 210;
+                const pageHeight = 297;
+                const pages = canvas.height / canvas.width;
+                
+                // Calculate height for each page
+                const totalPages = Math.ceil(pages);
                 const imgHeight = (canvas.height * imgWidth) / canvas.width;
                 let heightLeft = imgHeight;
                 let position = 0;
 
+                // First page
                 pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                heightLeft -= 297;
+                heightLeft -= pageHeight;
 
+                // Additional pages
                 while (heightLeft > 0) {
                     position = heightLeft - imgHeight;
                     pdf.addPage();
                     pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                    heightLeft -= 297;
+                    heightLeft -= pageHeight;
                 }
 
                 pdf.save('Shivhari_Tewari_Resume.pdf');
             }).catch(err => {
-                alert('Error generating PDF. Please try again.');
-                console.error(err);
+                console.error('Error generating PDF:', err);
             });
+        }
+
+        function downloadPDF() {
+            generatePDFAuto();
         }
 
         function copyToClipboard() {
